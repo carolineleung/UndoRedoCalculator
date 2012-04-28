@@ -11,8 +11,6 @@ public abstract class AbstractOperationSingleInput implements IOperation {
 		this.input = input;
 	}
 
-	public abstract Type getType();
-
 	public double getInput() {
 		return input;
 	}
@@ -32,7 +30,7 @@ public abstract class AbstractOperationSingleInput implements IOperation {
 
 	@Override
 	public String toString() {
-		return preOperationValue + " " + getType().getSymbol() + " " + input + " = " + result;
+		return preOperationValue + " " + getOperatorSign() + " " + input + " = " + result;
 	}
 
 }

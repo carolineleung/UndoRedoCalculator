@@ -1,6 +1,8 @@
 package com.calkwl.calculator.operation;
 
 public class AddOperation extends AbstractOperationSingleInput {
+	
+	private static final String SIGN = "+";
 
 	public AddOperation(double preOperationValue, double input) {
 		super(preOperationValue, input);
@@ -13,8 +15,8 @@ public class AddOperation extends AbstractOperationSingleInput {
 	}
 
 	@Override
-	public Type getType() {
-		return Type.Add;
+	public String getOperatorSign() {
+		return SIGN;
 	}
 
 }
